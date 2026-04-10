@@ -11,83 +11,98 @@ def get_logo_base64():
         with open("Logo TGDV.png", "rb") as f: return base64.b64encode(f.read()).decode("utf-8")
     except: return ""
 
-# CSS Giao diện siêu VIP
-st.markdown("""
+# Hàm lấy Hình nền tự động
+def get_bg_base64():
+    try:
+        # Ưu tiên lấy file HinhNen.jpg nếu sếp có để trong thư mục
+        with open("HinhNen.jpg", "rb") as f: return base64.b64encode(f.read()).decode("utf-8")
+    except: return ""
+
+# Xử lý CSS Hình nền
+bg_data = get_bg_base64()
+if bg_data:
+    # Nếu có ảnh HinhNen.jpg, web sẽ phủ kín ảnh lên toàn màn hình
+    bg_css = f"background-image: url('data:image/jpeg;base64,{bg_data}'); background-size: cover; background-attachment: fixed; background-position: center;"
+else:
+    # Nếu không tìm thấy ảnh, web tự động dùng lại nền vi mạch mờ
+    bg_css = "background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M20 20 L40 20 L50 30 L50 50 M80 20 L60 20 L50 30 L50 50 M50 50 L50 70 L70 90 L90 90 M50 70 L30 90 L10 90' stroke='%23004B87' stroke-width='2' fill='none' opacity='0.05'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='80' cy='20' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='10' cy='90' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='90' cy='90' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%23004B87' opacity='0.08'/%3E%3C/svg%3E\"); background-repeat: repeat;"
+
+# CSS Giao diện siêu VIP (Đã thu gọn kích thước các thẻ)
+st.markdown(f"""
 <style>
-    /* Hình nền vi mạch điện tử mờ 5% */
-    .stApp { 
+    /* Áp dụng hình nền */
+    .stApp {{ 
         background-color: #f4f6f9; 
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M20 20 L40 20 L50 30 L50 50 M80 20 L60 20 L50 30 L50 50 M50 50 L50 70 L70 90 L90 90 M50 70 L30 90 L10 90' stroke='%23004B87' stroke-width='2' fill='none' opacity='0.05'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='80' cy='20' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='10' cy='90' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='90' cy='90' r='3' fill='%23004B87' opacity='0.05'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%23004B87' opacity='0.08'/%3E%3C/svg%3E");
-        background-repeat: repeat;
-    }
+        {bg_css}
+    }}
     
     /* Header Banner */
-    .hero-banner {
-        background: linear-gradient(135deg, #004B87 0%, #17a2b8 100%);
-        padding: 40px 20px;
-        border-radius: 15px;
+    .hero-banner {{
+        background: linear-gradient(135deg, rgba(0,75,135,0.95) 0%, rgba(23,162,184,0.95) 100%);
+        padding: 30px 20px; /* Thu gọn banner một chút */
+        border-radius: 12px;
         text-align: center;
         color: white;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        margin-bottom: 40px;
-    }
-    .hero-banner h1 { font-size: 38px; font-weight: 900; margin: 15px 0 5px 0; text-transform: uppercase; letter-spacing: 1px;}
-    .hero-banner p { font-size: 18px; opacity: 0.9; margin: 0; font-weight: 500;}
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        margin-bottom: 30px;
+    }}
+    .hero-banner h1 {{ font-size: 32px; font-weight: 900; margin: 10px 0 5px 0; text-transform: uppercase; letter-spacing: 1px;}}
+    .hero-banner p {{ font-size: 16px; opacity: 0.9; margin: 0; font-weight: 500;}}
     
-    /* Grid layout cho các Cards */
-    .ecosystem-grid {
+    /* Grid layout cho các Cards - Ép các thẻ nhỏ lại và gần nhau hơn */
+    .ecosystem-grid {{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-        padding: 10px;
-    }
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Chiều ngang tối thiểu nhỏ hơn */
+        gap: 15px; /* Khoảng cách giữa các ô nhỏ hơn */
+        padding: 5px;
+    }}
     
-    /* BẢO VỆ GIAO DIỆN KHỎI STREAMLIT OVERRIDE */
-    a.app-card, a.app-card:hover, a.app-card:visited, a.app-card:active {
+    /* BẢO VỆ GIAO DIỆN KHỎI STREAMLIT OVERRIDE - Thu gọn padding */
+    a.app-card, a.app-card:hover, a.app-card:visited, a.app-card:active {{
         background-color: rgba(255, 255, 255, 0.95) !important;
-        border-radius: 12px !important;
-        padding: 25px !important;
+        border-radius: 10px !important;
+        padding: 15px 20px !important; /* Đệm bên trong nhỏ hơn */
         text-decoration: none !important;
         color: #333 !important;
-        border-top: 5px solid #004B87 !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
-        transition: all 0.3s ease !important;
+        border-top: 4px solid #004B87 !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+        transition: all 0.2s ease !important;
         display: flex !important;
         flex-direction: column !important;
         height: 100% !important;
         border-bottom: none !important;
         border-left: none !important;
         border-right: none !important;
-    }
-    a.app-card:hover {
-        transform: translateY(-8px) !important;
-        box-shadow: 0 15px 30px rgba(0,75,135,0.15) !important;
-        border-top: 5px solid #C8102E !important;
-    }
+    }}
+    a.app-card:hover {{
+        transform: translateY(-5px) !important;
+        box-shadow: 0 10px 20px rgba(0,75,135,0.15) !important;
+        border-top: 4px solid #C8102E !important;
+    }}
     
-    /* Nội dung Card */
-    .app-icon { font-size: 45px; margin-bottom: 15px; text-align: center;}
-    .app-title { font-size: 20px; font-weight: bold; color: #004B87; margin-bottom: 10px; text-align: center; text-transform: uppercase;}
-    .app-desc { font-size: 14px; color: #6c757d; line-height: 1.5; text-align: center; flex-grow: 1; margin-bottom: 20px;}
+    /* Nội dung Card thu gọn */
+    .app-icon {{ font-size: 35px; margin-bottom: 10px; text-align: center;}} /* Icon nhỏ lại */
+    .app-title {{ font-size: 17px; font-weight: bold; color: #004B87; margin-bottom: 8px; text-align: center; text-transform: uppercase;}} /* Tiêu đề nhỏ lại */
+    .app-desc {{ font-size: 13px; color: #6c757d; line-height: 1.4; text-align: center; flex-grow: 1; margin-bottom: 15px;}} /* Chữ mô tả bé gọn lại */
     
-    /* Nút truy cập */
-    .access-btn {
+    /* Nút truy cập thu nhỏ */
+    .access-btn {{
         background-color: #f8f9fa;
         color: #004B87;
         border: 2px solid #004B87;
-        padding: 10px;
-        border-radius: 8px;
+        padding: 8px;
+        border-radius: 6px;
         text-align: center;
         font-weight: bold;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
         text-transform: uppercase;
-        font-size: 14px;
-    }
-    a.app-card:hover .access-btn {
+        font-size: 13px;
+    }}
+    a.app-card:hover .access-btn {{
         background-color: #004B87;
         color: white;
         border-color: #004B87;
-    }
+    }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -95,7 +110,7 @@ st.markdown("""
 # BANNER CHÍNH
 # ==========================================
 logo_data = get_logo_base64()
-logo_html = f'<img src="data:image/png;base64,{logo_data}" style="height: 100px; object-fit: contain; margin-bottom: 10px;">' if logo_data else "🌐"
+logo_html = f'<img src="data:image/png;base64,{logo_data}" style="height: 80px; object-fit: contain; margin-bottom: 5px;">' if logo_data else "🌐"
 
 st.markdown(f"""
 <div class="hero-banner">
@@ -106,7 +121,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# KHU VỰC CHỨA 5 ỨNG DỤNG (Đã sửa tên và mô tả của thẻ AI)
+# KHU VỰC CHỨA 5 ỨNG DỤNG
 # ==========================================
 
 html_grid = """<div class="ecosystem-grid"><a href="https://tailieuhopbtgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🏛️</div><div class="app-title">E-Cabinet TGDV</div><div class="app-desc">Phòng họp không giấy. Cung cấp tài liệu số hóa, quản lý thời gian và thu thập ý kiến đại biểu trực tuyến.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://quan-ly-ho-so-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🗂️</div><div class="app-title">Quản lý Hồ sơ CBCC</div><div class="app-desc">Hệ thống số hóa hồ sơ nhân sự, tự động cập nhật lịch sử công tác, lương, thưởng và xuất Sơ yếu lý lịch chuẩn A4.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://bao-cao-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📊</div><div class="app-title">Thu thập Báo cáo</div><div class="app-desc">Hệ thống nộp số liệu cơ sở, tổng hợp tự động và hiển thị Dashboard thống kê dành cho Lãnh đạo Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://tracuuluong-tgdvtq.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🤖</div><div class="app-title">AI Tra cứu Lương</div><div class="app-desc">Trợ lý ảo thông minh hỗ trợ tra cứu tự động thông tin lương, phụ cấp và chế độ của cán bộ, công chức, người lao động.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📰</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a></div>"""
