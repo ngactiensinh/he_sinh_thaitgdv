@@ -145,8 +145,8 @@ footer_html = """
     font-size: 14px;
     line-height: 1.6;
 '>
-    <span style='font-weight: bold;'>© 2026 - Bản quyền thuộc về Ban Tuyên giáo và Dân vận Tỉnh ủy Tuyên Quang.</span><br>
-    Phát triển bởi: Đồng chí Ngạc Văn Tuấn
+    <span style='font-weight: bold;'>© 2026 - Bản quyền thuộc Ban Tuyên giáo và Dân vận Tỉnh ủy Tuyên Quang.</span><br>
+    Phát triển bởi: Ngạc Văn Tuấn - Chuyên viên Văn phòng Ban Tuyên giáo và Dân vận Tỉnh ủy
 </div>
 """
 st.markdown(footer_html, unsafe_allow_html=True)
