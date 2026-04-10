@@ -128,4 +128,25 @@ html_grid = """<div class="ecosystem-grid"><a href="https://tailieuhopbtgdv.stre
 
 st.markdown(html_grid, unsafe_allow_html=True)
 
-st.markdown("<br><hr><center><p style='color: #6c757d; font-size: 14px;'>© 2026 - Bản quyền thuộc về Ban Tuyên giáo và Dân vận Tỉnh ủy Tuyên Quang.<br>Phát triển bởi: Đồng chí Ngạc Văn Tuấn</p></center>", unsafe_allow_html=True)
+# Thêm đường kẻ ngang và khoảng cách
+st.write("---")
+
+# HTML/CSS cho chân trang mới: Ô trắng mờ, chữ đen nổi bật
+footer_html = """
+<div style='
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+'>
+    <span style='font-weight: bold;'>© 2026 - Bản quyền thuộc về Ban Tuyên giáo và Dân vận Tỉnh ủy Tuyên Quang.</span><br>
+    Phát triển bởi: Đồng chí Ngạc Văn Tuấn
+</div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
