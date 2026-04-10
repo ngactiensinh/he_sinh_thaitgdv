@@ -11,7 +11,7 @@ def get_logo_base64():
         with open("Logo TGDV.png", "rb") as f: return base64.b64encode(f.read()).decode("utf-8")
     except: return ""
 
-# CSS Giao diện siêu VIP (Đã chèn !important để chống Streamlit phá bĩnh)
+# CSS Giao diện siêu VIP
 st.markdown("""
 <style>
     /* Hình nền vi mạch điện tử mờ 5% */
@@ -106,10 +106,10 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# KHU VỰC CHỨA 5 ỨNG DỤNG (Đã Nén Chặt Dữ Liệu)
+# KHU VỰC CHỨA 5 ỨNG DỤNG (Đã Nén Chặt Dữ Liệu + 5 Link của Giám đốc Tuấn)
 # ==========================================
 
-html_grid = """<div class="ecosystem-grid"><a href="https://e-cabinet-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🏛️</div><div class="app-title">E-Cabinet TGDV</div><div class="app-desc">Phòng họp không giấy. Cung cấp tài liệu số hóa, quản lý thời gian và thu thập ý kiến đại biểu trực tuyến.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://quan-ly-ho-so-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🗂️</div><div class="app-title">Quản lý Hồ sơ CBCC</div><div class="app-desc">Hệ thống số hóa hồ sơ nhân sự, tự động cập nhật lịch sử công tác, lương, thưởng và xuất Sơ yếu lý lịch chuẩn A4.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://bao-cao-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📊</div><div class="app-title">Thu thập Báo cáo</div><div class="app-desc">Hệ thống nộp số liệu cơ sở, tổng hợp tự động và hiển thị Dashboard thống kê dành cho Lãnh đạo Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://tracuuluong-tgdvtq.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🤖</div><div class="app-title">Trợ lý AI TGDV</div><div class="app-desc">Trợ lý ảo thông minh hỗ trợ tra cứu nhanh chính sách, chế độ, văn bản pháp luật và tư vấn nghiệp vụ.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📰</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a></div>"""
+html_grid = """<div class="ecosystem-grid"><a href="https://tailieuhopbtgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🏛️</div><div class="app-title">E-Cabinet TGDV</div><div class="app-desc">Phòng họp không giấy. Cung cấp tài liệu số hóa, quản lý thời gian và thu thập ý kiến đại biểu trực tuyến.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://quan-ly-ho-so-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🗂️</div><div class="app-title">Quản lý Hồ sơ CBCC</div><div class="app-desc">Hệ thống số hóa hồ sơ nhân sự, tự động cập nhật lịch sử công tác, lương, thưởng và xuất Sơ yếu lý lịch chuẩn A4.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://bao-cao-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📊</div><div class="app-title">Thu thập Báo cáo</div><div class="app-desc">Hệ thống nộp số liệu cơ sở, tổng hợp tự động và hiển thị Dashboard thống kê dành cho Lãnh đạo Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://tracuuluong-tgdvtq.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🤖</div><div class="app-title">Trợ lý AI TGDV</div><div class="app-desc">Trợ lý ảo thông minh hỗ trợ tra cứu nhanh chính sách, chế độ, văn bản pháp luật và tư vấn nghiệp vụ.</div><div class="access-btn">🚀 Truy cập ngay</div></a><a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📰</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a></div>"""
 
 st.markdown(html_grid, unsafe_allow_html=True)
 
