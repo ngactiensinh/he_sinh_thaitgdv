@@ -119,17 +119,17 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# KHU VỰC CHỨA 7 ỨNG DỤNG (ĐÃ FIX LỖI HIỂN THỊ CODE)
+# KHU VỰC CHỨA 7 ỨNG DỤNG (SẮP XẾP THEO LUỒNG CÔNG VIỆC)
 # ==========================================
 
 html_grid = """<div class="ecosystem-grid">
-<a href="https://tailieuhopbtgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🏛️</div><div class="app-title">E-Cabinet TGDV</div><div class="app-desc">Phòng họp không giấy. Cung cấp tài liệu số hóa, quản lý thời gian và thu thập ý kiến đại biểu trực tuyến.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
-<a href="https://quan-ly-ho-so-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🗂️</div><div class="app-title">Quản lý Hồ sơ CBCC</div><div class="app-desc">Hệ thống số hóa hồ sơ nhân sự, tự động cập nhật lịch sử công tác, lương và xuất Sơ yếu lý lịch chuẩn A4.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://diemtinhangngaytgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🌐</div><div class="app-title" style="color: #C8102E;">Điểm tin Báo chí</div><div class="app-desc">Tổng hợp tin bài tự động 24/7 từ báo chính thống: Thời sự, Quốc tế, Dư luận xã hội và Dân vận khéo.</div><div class="access-btn" style="background-color: #C8102E; color: white;">🚀 Truy cập ngay</div></a>
+<a href="https://dangkysovanbantgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📑</div><div class="app-title">Đăng ký Số VB</div><div class="app-desc">Hệ thống cấp số tự động, quản lý sổ văn thư và thống kê văn bản đi chuẩn thể thức Ban TGDV.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="https://quan-ly-ho-so-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🗂️</div><div class="app-title">Quản lý Hồ sơ CBCC</div><div class="app-desc">Hệ thống số hóa hồ sơ nhân sự, tự động cập nhật lịch sử công tác, lương và xuất Sơ yếu lý lịch chuẩn A4.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="https://tailieuhopbtgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🏛️</div><div class="app-title">E-Cabinet TGDV</div><div class="app-desc">Phòng họp không giấy. Cung cấp tài liệu số hóa, quản lý thời gian và thu thập ý kiến đại biểu trực tuyến.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://bao-cao-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📊</div><div class="app-title">Thu thập Báo cáo</div><div class="app-desc">Hệ thống nộp số liệu cơ sở, tổng hợp tự động và hiển thị Dashboard thống kê dành cho Lãnh đạo Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://tracuuluong-tgdvtq.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🤖</div><div class="app-title">AI Tra cứu Lương</div><div class="app-desc">Trợ lý ảo thông minh hỗ trợ tra cứu tự động thông tin lương, phụ cấp và chế độ của cán bộ, công chức.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📖</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
-<a href="https://dangkysovanbantgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📑</div><div class="app-title">Đăng ký Số VB</div><div class="app-desc">Hệ thống cấp số tự động, quản lý sổ văn thư và thống kê văn bản đi chuẩn thể thức Ban TGDV.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 </div>"""
 
 st.markdown(html_grid, unsafe_allow_html=True)
