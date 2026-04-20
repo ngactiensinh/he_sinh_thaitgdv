@@ -113,7 +113,7 @@ logo_html = f'<img src="data:image/png;base64,{logo_data}" style="height: 80px; 
 st.markdown(f"""
 <div class="hero-banner">
     {logo_html}
-    <h1>HỆ SINH THÁI CHUYỂN ĐỔI SỐ 4.0</h1>
+    <h1>HỆ SINH THÁI 4.0</h1>
     <p>BAN TUYÊN GIÁO VÀ DÂN VẬN TỈNH ỦY TUYÊN QUANG</p>
 </div>
 """, unsafe_allow_html=True)
