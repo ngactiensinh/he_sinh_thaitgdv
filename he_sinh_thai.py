@@ -10,6 +10,14 @@ def get_logo_base64():
     try:
         with open("Logo TGDV.png", "rb") as f: return base64.b64encode(f.read()).decode("utf-8")
     except: return ""
+def get_codang_base64():
+    try:
+        with open("CoDang.jpg", "rb") as f: return base64.b64encode(f.read()).decode("utf-8")
+    except: return ""
+
+# Gọi hàm để lấy dữ liệu ảnh
+codang_data = get_codang_base64()
+codang_html = f'<img src="data:image/jpeg;base64,{codang_data}" style="width: 70px; height: 50px; object-fit: cover; border-radius: 4px; border: 2px solid #ffcc00; margin-bottom: 10px;">' if codang_data else "🇻🇳"
 
 # Hàm lấy Hình nền tự động
 def get_bg_base64():
@@ -130,7 +138,12 @@ html_grid = """<div class="ecosystem-grid">
 <a href="https://bao-cao-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📊</div><div class="app-title">Thu thập Báo cáo</div><div class="app-desc">Hệ thống nộp số liệu cơ sở, tổng hợp tự động và hiển thị Dashboard thống kê dành cho Lãnh đạo Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://tracuuluong-tgdvtq.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🤖</div><div class="app-title">AI Tra cứu Lương</div><div class="app-desc">Trợ lý ảo thông minh hỗ trợ tra cứu tự động thông tin lương, phụ cấp và chế độ của cán bộ, công chức.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📖</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
-<a href="http://hoidapnghiquyet.tuyenquang.gov.vn" target="_blank" class="app-card"><div class="app-icon" style="background:radial-gradient(circle, #C8102E 40%, #a00d25 100%); width:65px; height:65px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 10px auto; border:3px solid #ffcc00; box-shadow:0 4px 8px rgba(0,0,0,0.3); overflow:hidden; padding: 5px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" style="width:100%; height:100%; object-fit:contain;"><path fill="#C8102E" d="M0 0h540v360H0z"/><path fill="#FFCC00" d="M110.1 113.8c-1.3 1.1-2.2 2.3-2.9 3.6-1.3 2.5-1.5 5.2-.6 8.1 1.2 3.6 4 6.5 8 8.1 3.2 1.3 6.6 1.6 9.8.9 2.5-.5 4.8-1.7 6.6-3.4 1.1-1.1 1.9-2.2 2.5-3.4.9-1.9 1.3-4 .9-6-.5-2.5-1.7-4.8-3.4-6.6-1.1-1.1-2.2-1.9-3.4-2.5-1.9-.9-4-1.3-6-.9-2.5.5-4.8 1.7-6.6 3.4.1.3-.1.3-1 .8zm3.6-6.6c-1.3 1.1-2.2 2.3-2.9 3.6-1.3 2.5-1.5 5.2-.6 8.1 1.2 3.6 4 6.5 8 8.1 3.2 1.3 6.6 1.6 9.8.9 2.5-.5 4.8-1.7 6.6-3.4 1.1-1.1 1.9-2.2 2.5-3.4.9-1.9 1.3-4 .9-6-.5-2.5-1.7-4.8-3.4-6.6-1.1-1.1-2.2-1.9-3.4-2.5-1.9-.9-4-1.3-6-.9-2.5.5-4.8 1.7-6.6 3.4.1.3-.1.3-1 .8z"/><path fill="#FFCC00" d="M129.5 76.5c-2.3-1.1-4.8-1.7-7.4-1.7-5.2 0-10 2.2-13.4 5.7-3.4 3.4-5.7 8.3-5.7 13.4 0 2.5.5 5.1 1.7 7.4.3.5.7 1 1.1 1.4-1.4 1.1-2.9 2.1-4.3 3.1-.7.4-1.2.9-1.7 1.4-1.9 1.9-3.1 4.5-3.1 7.2 0 .4.1.9.2 1.3-.8.7-1.4 1.4-1.9 2.2-1.7 1.9-2.6 4.3-2.6 6.8 0 5.4 4.3 9.7 9.7 9.7 2.1 0 4.1-.7 5.7-1.7.4-.3.9-.7 1.3-1.1-.1.4-.2.8-.2 1.2 0 .3.1.6.2.9 0 0 0 0 0 0-1.1 2.5-1.7 5.2-1.7 8 0 10.7 8.7 19.3 19.3 19.3 1.9 0 3.7-.3 5.4-.8.9 2.2 2.3 4.1 4.1 5.7.3.3.7.6 1 .8-1.1 2.5-1.7 5.2-1.7 8 0 10.7 8.7 19.3 19.3 19.3 10.7 0 19.3-8.7 19.3-19.3 0-1.4-.1-2.7-.4-4 .8.3 1.6.4 2.5.4 3.6 0 6.6-3 6.6-6.6v-2.3c2.7-.8 5-2.2 6.8-4.2.9-1 1.6-2.1 2-3.2.7-1.6 1.1-3.3 1.1-5.1 0-7.3-5.9-13.2-13.2-13.2-3.6 0-6.8 1.4-9.3 3.8l-12.7-12.7c-.5-.5-1.1-1-1.7-1.3-.8.1-1.6.2-2.5.2-1.2 0-2.3-.1-3.4-.4.8-1.9 1.3-4 1.3-6 0-8.7-7-15.8-15.8-15.8-5.4 0-10.2 2.7-13.1 6.8-.3 0-.6.1-.9.1-1.2 0-2.3-.2-3.4-.5.8-1.9 1.3-4 1.3-6 0-8.7-7-15.8-15.8-15.8-5.2 0-9.8 2.5-12.8 6.5.1-.3.1-.6.1-.9.1 0 0 0 0 0zm-17.6 20.3c.1.3.1.6.1.9 0 5.4-4.3 9.7-9.7 9.7-2.1 0-4.1-.7-5.7-1.7l1.3-1.1c.1-.1.2-.2.3-.3.9-.9 1.9-1.8 2.9-2.7.3-.3.7-.5 1-.8zm24.6 24.6c.1.3.1.6.1.9 0 5.4-4.3 9.7-9.7 9.7-2.1 0-4.1-.7-5.7-1.7l1.3-1.1c.1-.1.2-.2.3-.3.9-.9 1.9-1.8 2.9-2.7.3-.3.7-.5 1-.8z"/></svg></div><div class="app-title">Hỏi đáp Nghị quyết</div><div class="app-desc">Chatbot AI hỗ trợ tra cứu, giải đáp thông tin về Nghị quyết Đại hội đại biểu Đảng bộ tỉnh nhiệm kỳ 2025-2030.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="http://hoidapnghiquyet.tuyenquang.gov.vn" target="_blank" class="app-card">
+    <div class="app-icon">{codang_html}</div>
+    <div class="app-title">Hỏi đáp Nghị quyết</div>
+    <div class="app-desc">Chatbot AI hỗ trợ tra cứu, giải đáp thông tin về Nghị quyết Đại hội đại biểu Đảng bộ tỉnh nhiệm kỳ 2025-2030.</div>
+    <div class="access-btn">🚀 Truy cập ngay</div>
+</a>/a>
 <a href="http://hoidapcds.tuyenquang.gov.vn" target="_blank" class="app-card"><div class="app-icon">💻</div><div class="app-title">Hỏi đáp Chuyển đổi số</div><div class="app-desc">Trợ lý ảo chuyên biệt cung cấp kiến thức, hướng dẫn và giải đáp các vấn đề về chuyển đổi số tại địa phương.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 </div>"""
 
