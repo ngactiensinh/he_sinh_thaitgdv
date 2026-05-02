@@ -119,7 +119,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# KHU VỰC CHỨA 7 ỨNG DỤNG (ĐÃ ĐỒNG BỘ MÀU NÚT)
+# KHU VỰC CHỨA 9 ỨNG DỤNG (ĐÃ BỔ SUNG 2 CHATBOT MỚI)
 # ==========================================
 
 html_grid = """<div class="ecosystem-grid">
@@ -130,6 +130,8 @@ html_grid = """<div class="ecosystem-grid">
 <a href="https://bao-cao-tgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📊</div><div class="app-title">Thu thập Báo cáo</div><div class="app-desc">Hệ thống nộp số liệu cơ sở, tổng hợp tự động và hiển thị Dashboard thống kê dành cho Lãnh đạo Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://tracuuluong-tgdvtq.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">🤖</div><div class="app-title">AI Tra cứu Lương</div><div class="app-desc">Trợ lý ảo thông minh hỗ trợ tra cứu tự động thông tin lương, phụ cấp và chế độ của cán bộ, công chức.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📖</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="http://hoidapnghiquyet.tuyenquang.gov.vn" target="_blank" class="app-card"><div class="app-icon">🇻🇳</div><div class="app-title">Hỏi đáp Nghị quyết</div><div class="app-desc">Chatbot AI hỗ trợ tra cứu, giải đáp thông tin về Nghị quyết Đại hội đại biểu Đảng bộ tỉnh nhiệm kỳ 2025-2030.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="http://hoidapcds.tuyenquang.gov.vn" target="_blank" class="app-card"><div class="app-icon">💻</div><div class="app-title">Hỏi đáp Chuyển đổi số</div><div class="app-desc">Trợ lý ảo chuyên biệt cung cấp kiến thức, hướng dẫn và giải đáp các vấn đề về chuyển đổi số tại địa phương.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 </div>"""
 
 st.markdown(html_grid, unsafe_allow_html=True)
