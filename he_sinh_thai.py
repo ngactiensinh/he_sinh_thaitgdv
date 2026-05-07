@@ -131,7 +131,7 @@ else:
     icon_codang = "🇻🇳"
 
 # ==========================================
-# KHU VỰC CHỨA 9 ỨNG DỤNG (BỔ SUNG 2 CHATBOT MỚI)
+# KHU VỰC CHỨA 10 ỨNG DỤNG (ĐÃ BỔ SUNG LƯƠNG & TIN BÀI)
 # ==========================================
 
 html_grid = f"""<div class="ecosystem-grid">
@@ -143,6 +143,8 @@ html_grid = f"""<div class="ecosystem-grid">
 <a href="https://bantinchibo.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📖</div><div class="app-title">Bản tin Sinh hoạt</div><div class="app-desc">Bản tin điện tử nội bộ, định dạng lật trang hiện đại phục vụ sinh hoạt Chi bộ và thông tin chuyên đề.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="http://hoidapnghiquyet.tuyenquang.gov.vn" target="_blank" class="app-card"><div class="app-icon">{icon_codang}</div><div class="app-title">Hỏi đáp Nghị quyết</div><div class="app-desc">Chatbot AI hỗ trợ tra cứu, giải đáp thông tin về Nghị quyết Đại hội đại biểu Đảng bộ tỉnh nhiệm kỳ 2025-2030.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 <a href="http://hoidapcds.tuyenquang.gov.vn" target="_blank" class="app-card"><div class="app-icon">💻</div><div class="app-title">Hỏi đáp CĐS</div><div class="app-desc">Trợ lý ảo chuyên biệt cung cấp kiến thức, hướng dẫn và giải đáp các vấn đề về chuyển đổi số tại địa phương.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="https://dangkytinbaitgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📝</div><div class="app-title">Đăng ký Tin bài</div><div class="app-desc">Hệ thống đăng ký đề tài, gửi bản thảo trực tuyến, duyệt tin và theo dõi tiến độ xuất bản tin bài của Ban.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
+<a href="https://theodoinangluongbtgdv.streamlit.app/" target="_blank" class="app-card"><div class="app-icon">📈</div><div class="app-title">Theo dõi Nâng lương</div><div class="app-desc">Quản lý diễn biến ngạch bậc lương, tự động cảnh báo đến hạn/quá hạn và xuất tờ trình báo cáo chuẩn thể thức.</div><div class="access-btn">🚀 Truy cập ngay</div></a>
 </div>"""
 
 st.markdown(html_grid, unsafe_allow_html=True)
