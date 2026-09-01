@@ -248,7 +248,7 @@ st.markdown(f"""
     {logo_html}
     <div class="banner-text">
         <h1>Hệ sinh thái chuyển đổi số 4.0</h1>
-        <p>Ban Tuyên giáo và Dân vận Tỉnh ủy Tuyên Quang</p>
+        <p>Ban Tuyên giáo Tỉnh ủy Tuyên Quang</p>
     </div>
     <div class="banner-badge">
         <span>10</span>
@@ -267,7 +267,7 @@ APPS = [
     {
         "icon": "🌐",
         "title": "Điểm tin Báo chí",
-        "desc": "Tổng hợp tin tức tự động 24/7 từ báo chính thống: Thời sự, Quốc tế, Dư luận và Dân vận khéo.",
+        "desc": "Tổng hợp tin tức tự động 24/7 từ báo chính thống: Thời sự, Quốc tế, Dư luận xã hội.",
         "url": "https://diemtinhangngaytgdv.streamlit.app/",
     },
     {
@@ -356,7 +356,7 @@ st.markdown(f"""
 st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 st.markdown("""
 <div class="footer">
-    <strong>© 2026 Ban Tuyên giáo và Dân vận Tỉnh ủy Tuyên Quang</strong><br>
-    Phát triển bởi: Ngạc Văn Tuấn — Chuyên viên Văn phòng Ban Tuyên giáo và Dân vận Tỉnh ủy
+    <strong>© 2026 Ban Tuyên giáo Tỉnh ủy Tuyên Quang</strong><br>
+    Phát triển bởi: Ngạc Văn Tuấn — Chuyên viên Văn phòng Ban Tuyên giáo Tỉnh ủy
 </div>
 """, unsafe_allow_html=True)
