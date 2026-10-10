@@ -274,7 +274,7 @@ APPS = [
         "icon": "🗂️",
         "title": "Quản lý Hồ sơ CBCC",
         "desc": "Số hóa hồ sơ nhân sự, cập nhật lịch sử công tác, lương và xuất Sơ yếu lý lịch chuẩn A4.",
-        "url": "https://quan-ly-ho-so-tgdv.streamlit.app/",
+        "url": "https://ngactiensinh.github.io/hoso-cbcc/",
     },
     {
         "icon": "🏛️",
